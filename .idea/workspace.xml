@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f575d686-08e0-4e9e-a677-9f4b51761869" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bazlur/eshoppers/modeldto/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/shopping/cart/modeldto/ProductDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bazlur/eshoppers/repository/DummyProductRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/shopping/cart/repository/DummyProductRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bazlur/eshoppers/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/shopping/cart/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bazlur/eshoppers/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/shopping/cart/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bazlur/eshoppers/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/shopping/cart/service/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bazlur/eshoppers/web/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/shopping/cart/web/HomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bazlur/eshoppers/web/ServerTimeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/imran/shopping/cart/web/ServerTimeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/bazlur/eshoppers/service/ProductServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/imran/shopping/cart/service/ProductServiceImplTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="f575d686-08e0-4e9e-a677-9f4b51761869" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,6 +52,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -91,7 +80,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696511707847</updated>
       <workItem from="1696511709195" duration="789000" />
-      <workItem from="1696515095897" duration="116000" />
+      <workItem from="1696515095897" duration="436000" />
     </task>
     <servers />
   </component>
