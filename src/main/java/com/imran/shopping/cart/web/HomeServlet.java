@@ -1,9 +1,9 @@
 package com.imran.shopping.cart.web;
 
-import com.imran.shopping.cart.modeldto.ProductDTO;
-import com.imran.shopping.cart.repository.DummyProductRepositoryImpl;
-import com.imran.shopping.cart.service.ProductService;
-import com.imran.shopping.cart.service.ProductServiceImpl;
+import com.imran.shopping.cart.dto.product.ProductDTO;
+import com.imran.shopping.cart.repository.product.DummyProductRepositoryImpl;
+import com.imran.shopping.cart.service.product.ProductService;
+import com.imran.shopping.cart.service.product.ProductServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,9 +30,5 @@ public class HomeServlet extends HttpServlet {
         RequestDispatcher rd
                 = req.getRequestDispatcher("/WEB-INF/home.jsp");
         rd.forward(req, resp);
-
-        for (int i = 0; i < 1_000; i++) {
-            LOGGER.info("Dummy log");
-        }
     }
 }

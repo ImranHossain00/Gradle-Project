@@ -19,4 +19,5 @@ dependencies {
     implementation 'jstl:jstl:1.2'
     implementation 'org.webjars:bootstrap:4.3.1'
     implementation 'ch.qos.logback:logback-classic:1.4.11'
+    implementation 'org.hibernate.validator:hibernate-validator:8.0.1.Final'
 }

@@ -1,7 +1,7 @@
 package com.imran.shopping.cart.service;
 
-import com.imran.shopping.cart.modeldto.ProductDTO;
-import com.imran.shopping.cart.repository.ProductRepository;
+import com.imran.shopping.cart.dto.product.ProductDTO;
+import com.imran.shopping.cart.repository.product.ProductRepository;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
