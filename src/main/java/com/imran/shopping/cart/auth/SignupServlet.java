@@ -39,7 +39,34 @@ public class SignupServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req,
                           HttpServletResponse resp)
             throws ServletException, IOException {
+        UserDTO userDTO = copyParameters(req);
+        if (isValid(userDTO)) {
+            LOGGER.info(
+                    "user is valid, creating a new user with: {}",
+                    userDTO
+            );
+            userService.saveUser(userDTO);
+            resp.sendRedirect("/home");
+        } else {
+            LOGGER.info(
+                    "User sent invalid data: {}",
+                    userDTO
+            );
+            RequestDispatcher rd
+                    = req.getRequestDispatcher("/WEB-INF/signup.jsp");
+            rd.forward(req, resp);
+        }
 
+    }
+
+    private UserDTO copyParameters(HttpServletRequest req) {
+        UserDTO userDTO = new UserDTO();
+        userDTO.setEmail(req.getParameter("email"));
+        userDTO.setFirstName(req.getParameter("firstName"));
+        userDTO.setLastName(req.getParameter("lastName"));
+        userDTO.setPassword(req.getParameter("password"));
+        userDTO.setPasswordConfirmed(req.getParameter("passwordConfirmed"));
+        userDTO.setUsername(req.getParameter("username"));
     }
 
     private boolean isValid(UserDTO userDTO) {
