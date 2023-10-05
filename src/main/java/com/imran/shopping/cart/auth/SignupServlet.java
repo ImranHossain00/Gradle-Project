@@ -1,8 +1,11 @@
 package com.imran.shopping.cart.auth;
 
+import com.imran.shopping.cart.dto.user.UserDTO;
 import com.imran.shopping.cart.repository.user.UserRepositoryImpl;
 import com.imran.shopping.cart.service.user.UserService;
 import com.imran.shopping.cart.service.user.UserSeviceImpl;
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.Validation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,6 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Set;
 
 @WebServlet("/signup")
 public class SignupServlet extends HttpServlet {
@@ -36,5 +40,17 @@ public class SignupServlet extends HttpServlet {
                           HttpServletResponse resp)
             throws ServletException, IOException {
 
+    }
+
+    private boolean isValid(UserDTO userDTO) {
+        var validatorFactory
+                = Validation.buildDefaultValidatorFactory();
+        var validator
+                = validatorFactory.getValidator();
+
+        Set<ConstraintViolation<UserDTO>> violations
+                = validator.validate(userDTO);
+
+        return violations.isEmpty();
     }
 }
