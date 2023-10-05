@@ -1,6 +1,6 @@
-package com.bazlur.eshoppers.repository;
+package com.imran.shopping.cart.repository;
 
-import com.bazlur.eshoppers.modeldto.ProductDTO;
+import com.imran.shopping.cart.modeldto.ProductDTO;
 
 import java.math.BigDecimal;
 import java.util.List;

@@ -1,7 +1,7 @@
-package com.bazlur.eshoppers.service;
+package com.imran.shopping.cart.service;
 
-import com.bazlur.eshoppers.modeldto.ProductDTO;
-import com.bazlur.eshoppers.repository.ProductRepository;
+import com.imran.shopping.cart.modeldto.ProductDTO;
+import com.imran.shopping.cart.repository.ProductRepository;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

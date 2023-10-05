@@ -1,6 +1,6 @@
-package com.bazlur.eshoppers.service;
+package com.imran.shopping.cart.service;
 
-import com.bazlur.eshoppers.modeldto.ProductDTO;
+import com.imran.shopping.cart.modeldto.ProductDTO;
 
 import java.util.List;
 

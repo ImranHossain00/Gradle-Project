@@ -1,4 +1,4 @@
-package com.bazlur.eshoppers.modeldto;
+package com.imran.shopping.cart.modeldto;
 
 import java.math.BigDecimal;
 

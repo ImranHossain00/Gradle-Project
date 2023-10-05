@@ -3,7 +3,7 @@ plugins {
     id 'war'
 }
 
-group 'com.bazlur.eshoppers'
+group 'com.imran.shopping.cart'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 11

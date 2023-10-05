@@ -1,9 +1,9 @@
-package com.bazlur.eshoppers.web;
+package com.imran.shopping.cart.web;
 
-import com.bazlur.eshoppers.modeldto.ProductDTO;
-import com.bazlur.eshoppers.repository.DummyProductRepositoryImpl;
-import com.bazlur.eshoppers.service.ProductService;
-import com.bazlur.eshoppers.service.ProductServiceImpl;
+import com.imran.shopping.cart.modeldto.ProductDTO;
+import com.imran.shopping.cart.repository.DummyProductRepositoryImpl;
+import com.imran.shopping.cart.service.ProductService;
+import com.imran.shopping.cart.service.ProductServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
