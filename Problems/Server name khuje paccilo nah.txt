@@ -1,8 +1,0 @@
-gradle web.xml e 
-    <servlet-mapping>
-        <servlet-name>Server Time</servlet-name>
-        <url-pattern>/server-time</url-pattern>
-    </servlet-mapping>
-    
-    servlet name ta jei java class silo o oi class khuje nah pawate akta error dekhaccilo jemon "Disconnected from the target VM, address: '127.0.0.1:35437', transport: 'socket'"
-    pore servlet mapping e jei Server name thie map kora silo oi nam ta abar web directory te add kore dile problem solve hoe jai.
