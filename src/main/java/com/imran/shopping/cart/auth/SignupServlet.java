@@ -67,6 +67,7 @@ public class SignupServlet extends HttpServlet {
         userDTO.setPassword(req.getParameter("password"));
         userDTO.setPasswordConfirmed(req.getParameter("passwordConfirmed"));
         userDTO.setUsername(req.getParameter("username"));
+        return userDTO;
     }
 
     private boolean isValid(UserDTO userDTO) {
