@@ -71,4 +71,16 @@ public class SignupServlet extends HttpServlet {
         userDTO.setUsername(req.getParameter("username"));
         return userDTO;
     }
+
+    private boolean isValid(UserDTO userDTO) {
+        var validatorFactory
+                = Validation.buildDefaultValidatorFactory();
+        var validator
+                = validatorFactory.getValidator();
+
+        Set<ConstraintViolation<UserDTO>> violations
+                = validator.validate(userDTO);
+
+        return violations.isEmpty();
+    }
 }

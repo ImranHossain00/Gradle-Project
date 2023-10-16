@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f575d686-08e0-4e9e-a677-9f4b51761869" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+>>>>>>> origin/main
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +69,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -83,6 +88,21 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/peripatetic/Project/demo/Shopping-Cart",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> origin/main
   }
 }</component>
   <component name="RecentsManager">
@@ -118,7 +138,11 @@
         </artifact>
       </deployment>
       <server-settings>
+<<<<<<< HEAD
         <option name="BASE_DIRECTORY_NAME" value="9a2dc6af-825e-4407-a24c-d1216e00d4a4" />
+=======
+        <option name="BASE_DIRECTORY_NAME" value="202a51a1-8087-451c-b6ee-e08d3f8b6f6d" />
+>>>>>>> origin/main
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -126,7 +150,11 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
+<<<<<<< HEAD
         <option name="DEBUG_PORT" value="41845" />
+=======
+        <option name="DEBUG_PORT" value="33753" />
+>>>>>>> origin/main
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -205,6 +233,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696511707847</updated>
       <workItem from="1696511709195" duration="789000" />
+<<<<<<< HEAD
       <workItem from="1696515095897" duration="8622000" />
       <workItem from="1696583839698" duration="2816000" />
       <workItem from="1696586667805" duration="931000" />
@@ -216,6 +245,10 @@
       <workItem from="1697125422570" duration="2688000" />
       <workItem from="1697141296083" duration="38000" />
       <workItem from="1697476739672" duration="672000" />
+=======
+      <workItem from="1696515095897" duration="436000" />
+      <workItem from="1696586191193" duration="26000" />
+>>>>>>> origin/main
     </task>
     <servers />
   </component>
