@@ -25,6 +25,8 @@ public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+        for (int i = 0; i < 1_000; i++)
+            LOGGER.info("dumm.log");
         List<ProductDTO> allProducts =  productService.findAllProductSortByName();
         req.setAttribute("products", allProducts);
         RequestDispatcher rd
