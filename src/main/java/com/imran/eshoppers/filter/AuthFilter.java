@@ -1,4 +1,4 @@
-package eshoppers.filter;
+package com.imran.eshoppers.filter;
 
 import com.imran.eshoppers.util.SecurityContext;
 

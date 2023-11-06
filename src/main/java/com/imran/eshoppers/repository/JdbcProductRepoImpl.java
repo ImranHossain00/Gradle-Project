@@ -1,4 +1,4 @@
-package eshoppers.repository;
+package com.imran.eshoppers.repository;
 
 import com.imran.eshoppers.domain.Product;
 import com.imran.eshoppers.jdbc.ConnectionPool;

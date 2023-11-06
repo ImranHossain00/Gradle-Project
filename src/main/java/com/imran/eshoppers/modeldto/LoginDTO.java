@@ -1,4 +1,4 @@
-package eshoppers.modeldto;
+package com.imran.eshoppers.modeldto;
 
 import javax.validation.constraints.NotEmpty;
 

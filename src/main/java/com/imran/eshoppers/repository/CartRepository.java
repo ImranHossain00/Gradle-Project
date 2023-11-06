@@ -1,4 +1,4 @@
-package eshoppers.repository;
+package com.imran.eshoppers.repository;
 
 import com.imran.eshoppers.domain.Cart;
 import com.imran.eshoppers.domain.User;

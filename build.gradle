@@ -3,7 +3,7 @@ plugins {
     id 'war'
 }
 
-group 'com.bazlur.eshoppers'
+group 'com.imran.eshoppers'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 11
@@ -20,4 +20,6 @@ dependencies {
     implementation 'org.webjars:bootstrap:4.3.1'
     implementation 'ch.qos.logback:logback-classic:1.4.11'
     implementation 'org.hibernate.validator:hibernate-validator:6.2.5.Final'
+    implementation 'mysql:mysql-connector-java:8.0.31'
+    implementation 'com.zaxxer:HikariCP:5.0.1'
 }

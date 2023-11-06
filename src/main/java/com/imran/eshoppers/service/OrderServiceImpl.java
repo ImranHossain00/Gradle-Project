@@ -1,4 +1,4 @@
-package eshoppers.service;
+package com.imran.eshoppers.service;
 
 import com.imran.eshoppers.domain.Order;
 import com.imran.eshoppers.domain.ShippingAddress;

@@ -1,4 +1,4 @@
-package eshoppers.jdbc;
+package com.imran.eshoppers.jdbc;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

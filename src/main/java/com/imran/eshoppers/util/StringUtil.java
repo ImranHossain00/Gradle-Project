@@ -1,4 +1,4 @@
-package eshoppers.util;
+package com.imran.eshoppers.util;
 
 public class StringUtil {
     public static boolean isNotEmpty(String action) {

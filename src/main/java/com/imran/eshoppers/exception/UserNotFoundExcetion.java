@@ -1,4 +1,4 @@
-package eshoppers.exception;
+package com.imran.eshoppers.exception;
 
 public class UserNotFoundExcetion extends Exception{
     public UserNotFoundExcetion(String message) {

@@ -1,4 +1,4 @@
-package eshoppers.domain;
+package com.imran.eshoppers.domain;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package eshoppers.web;
+package com.imran.eshoppers.web;
 
 import com.imran.eshoppers.modeldto.UserDTO;
 import com.imran.eshoppers.repository.UserRepositoryImpl;

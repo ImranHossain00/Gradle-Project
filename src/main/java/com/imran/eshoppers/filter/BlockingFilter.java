@@ -1,4 +1,4 @@
-package eshoppers.filter;
+package com.imran.eshoppers.filter;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

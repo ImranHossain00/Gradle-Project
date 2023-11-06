@@ -1,4 +1,4 @@
-package eshoppers.util;
+package com.imran.eshoppers.util;
 
 import com.imran.eshoppers.annotation.PasswordEqual;
 
