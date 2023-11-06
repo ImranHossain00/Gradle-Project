@@ -1,7 +1,7 @@
-package com.bazlur.eshoppers.service;
+package com.imran.eshoppers.service;
 
-import com.bazlur.eshoppers.modeldto.ProductDTO;
-import com.bazlur.eshoppers.repository.ProductRepository;
+import com.imran.eshoppers.domain.Product;
+import com.imran.eshoppers.repository.ProductRepository;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,15 +13,17 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 public class ProductServiceImplTest {
-    private final static ProductDTO APPLE_I_PAD
-            = new ProductDTO(
+    private final static Product APPLE_I_PAD
+            = new Product(
+                    1L,
                     "Apple iPad",
             "Apple iPad 10.2.32GB",
             BigDecimal.valueOf(369.99)
     );
 
-    private final static ProductDTO HEADPHONE
-            = new ProductDTO(
+    private final static Product HEADPHONE
+            = new Product(
+                    2L,
             "Headphones",
             "Jabra Elite Bluetooth",
             BigDecimal.valueOf(249.99)
