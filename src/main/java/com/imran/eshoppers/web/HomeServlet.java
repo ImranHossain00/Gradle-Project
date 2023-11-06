@@ -29,7 +29,7 @@ public class HomeServlet extends HttpServlet {
     private final static Logger LOGGER
             = LoggerFactory.getLogger(HomeServlet.class);
     private final ProductService productService
-            = new ProductServiceImpl(new ProductRepositoryImpl());
+            = new ProductServiceImpl(new JdbcProductRepoImpl());
 
     private final CartService cartService
             = new CartServiceImpl(new CartRepositoryImpl(),
