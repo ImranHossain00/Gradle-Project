@@ -2,10 +2,9 @@ package com.imran.eshoppers.web;
 
 
 import com.imran.eshoppers.modeldto.ProductDTO;
-import com.imran.eshoppers.repository.CartItemRepositoryImpl;
 import com.imran.eshoppers.repository.CartRepositoryImpl;
+import com.imran.eshoppers.repository.JdbcCartItemRepoImpl;
 import com.imran.eshoppers.repository.JdbcProductRepoImpl;
-import com.imran.eshoppers.repository.ProductRepositoryImpl;
 import com.imran.eshoppers.service.CartService;
 import com.imran.eshoppers.service.CartServiceImpl;
 import com.imran.eshoppers.service.ProductService;
@@ -34,7 +33,7 @@ public class HomeServlet extends HttpServlet {
     private final CartService cartService
             = new CartServiceImpl(new CartRepositoryImpl(),
                                   new JdbcProductRepoImpl(),
-                                  new CartItemRepositoryImpl());
+                                  new JdbcCartItemRepoImpl());
 
     @Override
     protected void doGet(HttpServletRequest req,
@@ -53,9 +52,6 @@ public class HomeServlet extends HttpServlet {
 
         LOGGER.info("Total product found {}", allProducts.size());
 
-//        Cart cart1
-//                = cartService.
-//                getCartByUser(SecurityContext.getCurrentUser(req));
         if (SecurityContext.isAuthenticated(req)) {
             var curUser
                     = SecurityContext.getCurrentUser(req);

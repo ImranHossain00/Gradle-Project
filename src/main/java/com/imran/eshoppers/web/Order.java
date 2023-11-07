@@ -28,8 +28,8 @@ public class Order extends HttpServlet {
 
     private CartService cartService
             = new CartServiceImpl(new CartRepositoryImpl(),
-                                  new ProductRepositoryImpl(),
-                                  new CartItemRepositoryImpl());
+                                  new JdbcProductRepoImpl(),
+                                  new JdbcCartItemRepoImpl());
     private OrderService orderService
             = new OrderServiceImpl(new OrderRepositoryImpl(),
                                    new ShippingAddressRepositoryImpl(),

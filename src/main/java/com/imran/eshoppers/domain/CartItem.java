@@ -3,19 +3,10 @@ package com.imran.eshoppers.domain;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class CartItem {
-    private Long id;
+public class CartItem extends Domain{
     private Product product;
     private Integer quantity;
     private BigDecimal price;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public Product getProduct() {
         return product;
@@ -46,11 +37,12 @@ public class CartItem {
         if (this == object) return true;
         if (object == null || getClass() != object.getClass()) return false;
         CartItem cartItem = (CartItem) object;
-        return Objects.equals(id, cartItem.id) && Objects.equals(product, cartItem.product) && Objects.equals(quantity, cartItem.quantity) && Objects.equals(price, cartItem.price);
+        return Objects.equals(product, cartItem.product) && Objects.equals(quantity, cartItem.quantity) && Objects.equals(price, cartItem.price);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, product, quantity, price);
+        return Objects.hash(product, quantity, price);
     }
 }
+

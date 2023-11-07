@@ -25,8 +25,19 @@ public class JdbcProductRepoImpl implements ProductRepository{
     private static final String SELECT_ALL_PRODUCTS
             = "select * from product";
 
-    public static final String SELECT_PRODUCT_BY_ID
+    private static final String SELECT_PRODUCT_BY_ID
             = "select * from product where id = ?";
+
+    private static final String INSERT_PRODUCT
+            = "INSERT INTO product (name, " +
+            "description, " +
+            "price, " +
+            "version, " +
+            "date_created, " +
+            "date_last_updated) " +
+            "values(?, ?, ?, ?, ?, ?)";
+
+
     @Override
     public List<Product> findAllProduct() {
         try (var connection = dataSource.getConnection();
@@ -38,23 +49,6 @@ public class JdbcProductRepoImpl implements ProductRepository{
             LOGGER.info("Unable to fetch products from database");
         }
         return Collections.emptyList();
-    }
-
-    private List<Product> extractPoducts(ResultSet resultSet) throws SQLException {
-        List<Product> products = new ArrayList<>();
-
-        while (resultSet.next()) {
-            var product = new Product();
-            product.setId(resultSet.getLong("id"));
-            product.setName(resultSet.getString("name"));
-            product.setVersion(resultSet.getLong("version"));
-            product.setDescription(resultSet.getString("description"));
-            product.setPrice(resultSet.getBigDecimal("price"));
-            product.setDateCreated(resultSet.getTimestamp("date_created").toLocalDateTime());
-            product.setDateLastUpdated(resultSet.getTimestamp("date_last_updated").toLocalDateTime());
-            products.add(product);
-        }
-        return products;
     }
 
     @Override
@@ -74,16 +68,9 @@ public class JdbcProductRepoImpl implements ProductRepository{
     }
 
     public void save(Product product) {
-        var sql = "INSERT INTO product (name, " +
-                "description, " +
-                "price, " +
-                "version, " +
-                "date_created, " +
-                "date_last_updated) " +
-                "values(?, ?, ?, ?, ?, ?)";
 
         try (var connection = dataSource.getConnection();
-             var pstm = connection.prepareStatement(sql)) {
+             var pstm = connection.prepareStatement(INSERT_PRODUCT)) {
 
             pstm.setString(1, product.getName());
             pstm.setString(2, product.getDescription());
@@ -96,5 +83,23 @@ public class JdbcProductRepoImpl implements ProductRepository{
         } catch (Exception e) {
             throw new RuntimeException("Unable to insert product information into database");
         }
+    }
+
+    private List<Product> extractPoducts(ResultSet resultSet) throws SQLException {
+        List<Product> products = new ArrayList<>();
+
+        while (resultSet.next()) {
+            var product = new Product();
+            product.setId(resultSet.getLong("id"));
+            product.setName(resultSet.getString("name"));
+            product.setVersion(resultSet.getLong("version"));
+            product.setDescription(resultSet.getString("description"));
+            product.setPrice(resultSet.getBigDecimal("price"));
+            product.setDateCreated(resultSet.getTimestamp("date_created").toLocalDateTime());
+            product.setDateLastUpdated(resultSet.getTimestamp("date_last_updated").toLocalDateTime());
+
+            products.add(product);
+        }
+        return products;
     }
 }

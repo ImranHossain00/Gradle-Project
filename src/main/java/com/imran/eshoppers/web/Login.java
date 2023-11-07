@@ -2,7 +2,7 @@ package com.imran.eshoppers.web;
 
 import com.imran.eshoppers.exception.UserNotFoundExcetion;
 import com.imran.eshoppers.modeldto.LoginDTO;
-import com.imran.eshoppers.repository.UserRepositoryImpl;
+import com.imran.eshoppers.repository.JdbcUserRepoImpl;
 import com.imran.eshoppers.service.UserService;
 import com.imran.eshoppers.service.UserServiceImpl;
 import com.imran.eshoppers.util.SecurityContext;
@@ -25,7 +25,7 @@ public class Login extends HttpServlet {
             = LoggerFactory.getLogger(Login.class);
 
     private final UserService userService
-            = new UserServiceImpl(new UserRepositoryImpl());
+            = new UserServiceImpl(new JdbcUserRepoImpl());
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

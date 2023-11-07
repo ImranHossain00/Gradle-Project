@@ -1,8 +1,8 @@
 package com.imran.eshoppers.web;
 
-import com.imran.eshoppers.repository.CartItemRepositoryImpl;
 import com.imran.eshoppers.repository.CartRepositoryImpl;
-import com.imran.eshoppers.repository.ProductRepositoryImpl;
+import com.imran.eshoppers.repository.JdbcCartItemRepoImpl;
+import com.imran.eshoppers.repository.JdbcProductRepoImpl;
 import com.imran.eshoppers.service.CartService;
 import com.imran.eshoppers.service.CartServiceImpl;
 import com.imran.eshoppers.util.SecurityContext;
@@ -24,8 +24,8 @@ public class Checkout extends HttpServlet {
 
     private CartService cartService
             = new CartServiceImpl(new CartRepositoryImpl(),
-                                  new ProductRepositoryImpl(),
-                                  new CartItemRepositoryImpl());
+                                  new JdbcProductRepoImpl(),
+                                  new JdbcCartItemRepoImpl());
 
     @Override
     protected void doGet(HttpServletRequest req,

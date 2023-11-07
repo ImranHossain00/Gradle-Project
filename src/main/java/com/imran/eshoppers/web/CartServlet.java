@@ -4,9 +4,9 @@ import com.imran.eshoppers.domain.Cart;
 import com.imran.eshoppers.domain.User;
 import com.imran.eshoppers.exception.CartItemNotFoundException;
 import com.imran.eshoppers.exception.ProductNotFoundException;
-import com.imran.eshoppers.repository.CartItemRepositoryImpl;
 import com.imran.eshoppers.repository.CartRepositoryImpl;
-import com.imran.eshoppers.repository.ProductRepositoryImpl;
+import com.imran.eshoppers.repository.JdbcCartItemRepoImpl;
+import com.imran.eshoppers.repository.JdbcProductRepoImpl;
 import com.imran.eshoppers.service.CartService;
 import com.imran.eshoppers.service.CartServiceImpl;
 import com.imran.eshoppers.util.SecurityContext;
@@ -28,8 +28,8 @@ public class CartServlet extends HttpServlet {
 
     private final CartService cartService
             = new CartServiceImpl(new CartRepositoryImpl(),
-                                  new ProductRepositoryImpl(),
-                                  new CartItemRepositoryImpl());
+                                  new JdbcProductRepoImpl(),
+                                  new JdbcCartItemRepoImpl());
 
     @Override
     protected void doPost(HttpServletRequest req,

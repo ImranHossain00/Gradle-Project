@@ -1,7 +1,7 @@
 package com.imran.eshoppers.web;
 
 import com.imran.eshoppers.modeldto.UserDTO;
-import com.imran.eshoppers.repository.UserRepositoryImpl;
+import com.imran.eshoppers.repository.JdbcUserRepoImpl;
 import com.imran.eshoppers.service.UserService;
 import com.imran.eshoppers.service.UserServiceImpl;
 import com.imran.eshoppers.util.ValidationUtil;
@@ -22,7 +22,7 @@ public class SignUp extends HttpServlet {
             = LoggerFactory.getLogger(SignUp.class);
 
     private final UserService userService
-            = new UserServiceImpl(new UserRepositoryImpl());
+            = new UserServiceImpl(new JdbcUserRepoImpl());
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
