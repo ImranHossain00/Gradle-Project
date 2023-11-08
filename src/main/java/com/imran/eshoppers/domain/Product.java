@@ -1,6 +1,7 @@
 package com.imran.eshoppers.domain;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class Product extends Domain{
     private String name;
@@ -31,5 +32,18 @@ public class Product extends Domain{
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (!(object instanceof Product)) return false;
+        Product product = (Product) object;
+        return Objects.equals(getId(), product.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
     }
 }

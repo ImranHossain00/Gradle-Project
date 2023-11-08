@@ -8,6 +8,16 @@ public class CartItem extends Domain{
     private Integer quantity;
     private BigDecimal price;
 
+    private Cart cart;
+
+    public Cart getCart() {
+        return cart;
+    }
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
+    }
+
     public Product getProduct() {
         return product;
     }
@@ -35,14 +45,13 @@ public class CartItem extends Domain{
     @Override
     public boolean equals(Object object) {
         if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
+        if (!(object instanceof CartItem)) return false;
         CartItem cartItem = (CartItem) object;
-        return Objects.equals(product, cartItem.product) && Objects.equals(quantity, cartItem.quantity) && Objects.equals(price, cartItem.price);
+        return Objects.equals(getId(), cartItem.getId());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(product, quantity, price);
+        return Objects.hash(getId());
     }
 }
-

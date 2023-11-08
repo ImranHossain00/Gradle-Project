@@ -16,9 +16,11 @@ public class JdbcTemplate {
     private DataSource dataSource
             = ConnectionPool.getInstance().getDataSource();
 
-    public void updateQuery(String query, Object... parameters) {
+    public void updateQuery(String query,
+                            Object... parameters) {
         try (var connection = dataSource.getConnection();
              var pstm = connection.prepareStatement(query)){
+
             addParameters(pstm, parameters);
             pstm.executeUpdate();
         } catch (SQLException e) {
@@ -27,7 +29,8 @@ public class JdbcTemplate {
         }
     }
 
-    public void query(String query, ThrowableConsumer<ResultSet> consumer) {
+    public void query(String query,
+                      ThrowableConsumer<ResultSet> consumer) {
         try (var connection = dataSource.getConnection();
              var pstm = connection.prepareStatement(query)){
 
@@ -63,6 +66,9 @@ public class JdbcTemplate {
         }
     }
 
+    // The Functional Interface that is ObjectRowMapper will determine
+    // which domain class will be mapped to the result set
+    // that will be obtained by the query.
     public <E> List<E> queryForObject(String query,
                                       ObjectRowMapper<E> objectRowMapper) {
         try (var connection = dataSource.getConnection();
@@ -89,6 +95,7 @@ public class JdbcTemplate {
                                       ObjectRowMapper<E> objectRowMapper) {
         try (var connection = dataSource.getConnection();
              var pstm = connection.prepareStatement(query)) {
+
             addParameters(pstm, new Object[]{param});
             var resultSet = pstm.executeQuery();
             List<E> listOfE = new ArrayList<>();
@@ -103,6 +110,19 @@ public class JdbcTemplate {
         } catch (SQLException e) {
             LOGGER.info("Unable to execute query for result", e);
             throw new RuntimeException("Unable to execute query for result", e);
+        }
+    }
+
+    public void deleteByID(String query,
+                           Long id) {
+        try (var connection = dataSource.getConnection();
+             var pstm = connection.prepareStatement(query)){
+
+            pstm.setLong(1, id);
+            pstm.execute();
+        } catch (SQLException e) {
+            LOGGER.error("Unable to execute delete by id: {}", id, e);
+            throw new RuntimeException("Unable to execute delete", e);
         }
     }
 
@@ -132,18 +152,6 @@ public class JdbcTemplate {
                 pstm.setBoolean(idx, (Boolean) parameter);
             }
             idx++;
-        }
-    }
-
-    public void deleteByID(String query, Long id) {
-        try (var connection = dataSource.getConnection();
-             var pstm = connection.prepareStatement(query)){
-
-            pstm.setLong(1, id);
-            pstm.execute();
-        } catch (SQLException e) {
-            LOGGER.error("Unable to execute delete by id: {}", id, e);
-            throw new RuntimeException("Unable to execute delete", e);
         }
     }
 }

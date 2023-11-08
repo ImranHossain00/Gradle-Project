@@ -2,7 +2,7 @@ package com.imran.eshoppers.domain;
 
 import java.util.Objects;
 
-public class User {
+public class User extends Domain{
     private String username;
     private String password;
     private String email;
@@ -52,15 +52,14 @@ public class User {
     @Override
     public boolean equals(Object object) {
         if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
+        if (!(object instanceof User)) return false;
         User user = (User) object;
-//        return Objects.equals(username, user.username) && Objects.equals(password, user.password) && Objects.equals(email, user.email) && Objects.equals(firstName, user.firstName) && Objects.equals(lastName, user.lastName);
-
-        return username.equals(user.username);
+        return Objects.equals(getId(), user.getId());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(username);
+
+        return Objects.hash(getId());
     }
 }
