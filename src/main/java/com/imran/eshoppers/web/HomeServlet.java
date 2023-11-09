@@ -2,8 +2,8 @@ package com.imran.eshoppers.web;
 
 
 import com.imran.eshoppers.modeldto.ProductDTO;
-import com.imran.eshoppers.repository.CartRepositoryImpl;
 import com.imran.eshoppers.repository.JdbcCartItemRepoImpl;
+import com.imran.eshoppers.repository.JdbcCartRepoImpl;
 import com.imran.eshoppers.repository.JdbcProductRepoImpl;
 import com.imran.eshoppers.service.CartService;
 import com.imran.eshoppers.service.CartServiceImpl;
@@ -31,7 +31,7 @@ public class HomeServlet extends HttpServlet {
             = new ProductServiceImpl(new JdbcProductRepoImpl());
 
     private final CartService cartService
-            = new CartServiceImpl(new CartRepositoryImpl(),
+            = new CartServiceImpl(new JdbcCartRepoImpl(),
                                   new JdbcProductRepoImpl(),
                                   new JdbcCartItemRepoImpl());
 
@@ -44,7 +44,10 @@ public class HomeServlet extends HttpServlet {
         final String attribute
                 = req.getParameter("orderSuccess");
         if (attribute != null && Boolean.parseBoolean(attribute)) {
-            req.setAttribute("message", "<strong>Congratulation!</strong> You're order has been placed successfully. ");
+            req.setAttribute(
+                    "message",
+                    "<strong>Congratulation!</strong> You're order has been placed successfully."
+            );
         }
 
         List<ProductDTO> allProducts

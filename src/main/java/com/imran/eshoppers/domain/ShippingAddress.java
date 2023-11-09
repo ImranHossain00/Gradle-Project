@@ -1,6 +1,6 @@
 package com.imran.eshoppers.domain;
 
-public class ShippingAddress {
+public class ShippingAddress extends Domain{
 
     private String address;
     private String address2;

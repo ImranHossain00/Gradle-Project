@@ -27,13 +27,13 @@ public class Order extends HttpServlet {
             = LoggerFactory.getLogger(Order.class);
 
     private CartService cartService
-            = new CartServiceImpl(new CartRepositoryImpl(),
+            = new CartServiceImpl(new JdbcCartRepoImpl(),
                                   new JdbcProductRepoImpl(),
                                   new JdbcCartItemRepoImpl());
     private OrderService orderService
-            = new OrderServiceImpl(new OrderRepositoryImpl(),
-                                   new ShippingAddressRepositoryImpl(),
-                                   new CartRepositoryImpl());
+            = new OrderServiceImpl(new JdbcOrderRepoImpl(),
+                                   new JdbcShippingAddressRepoImpl(),
+                                   new JdbcCartRepoImpl());
 
     @Override
     protected void doGet(HttpServletRequest req,

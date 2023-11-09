@@ -1,13 +1,16 @@
-package com.imran.eshoppers.repository;
+package com.imran.eshoppers.repository.dummy;
 
 import com.imran.eshoppers.domain.Cart;
 import com.imran.eshoppers.domain.Order;
 import com.imran.eshoppers.domain.User;
+import com.imran.eshoppers.repository.CartRepository;
+import com.imran.eshoppers.repository.JdbcOrderRepoImpl;
+import com.imran.eshoppers.repository.OrderRepository;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class CartRepositoryImpl implements CartRepository{
+public class CartRepositoryImpl implements CartRepository {
     // we used static because Map must be same for all instances or objects
     // that will be created by users.
     // here Map used for optimizing the time complexity
@@ -17,7 +20,7 @@ public class CartRepositoryImpl implements CartRepository{
                                          // see page no.167 in web book
 
     private final OrderRepository orderRepository
-            = new OrderRepositoryImpl();
+            = new JdbcOrderRepoImpl();
     @Override
     public Optional<Cart> findByUser(User curUser) {
         var usersCart = getCart(curUser);
@@ -78,5 +81,10 @@ public class CartRepositoryImpl implements CartRepository{
             return new LinkedHashSet<>(Arrays.asList(objects));
         }));
         return cart;
+    }
+
+    @Override
+    public Optional<Cart> findOne(Long cartId) {
+        return Optional.empty();
     }
 }

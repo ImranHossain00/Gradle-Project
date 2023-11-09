@@ -1,7 +1,7 @@
 package com.imran.eshoppers.web;
 
-import com.imran.eshoppers.repository.CartRepositoryImpl;
 import com.imran.eshoppers.repository.JdbcCartItemRepoImpl;
+import com.imran.eshoppers.repository.JdbcCartRepoImpl;
 import com.imran.eshoppers.repository.JdbcProductRepoImpl;
 import com.imran.eshoppers.service.CartService;
 import com.imran.eshoppers.service.CartServiceImpl;
@@ -23,7 +23,7 @@ public class Checkout extends HttpServlet {
             = LoggerFactory.getLogger(Checkout.class);
 
     private CartService cartService
-            = new CartServiceImpl(new CartRepositoryImpl(),
+            = new CartServiceImpl(new JdbcCartRepoImpl(),
                                   new JdbcProductRepoImpl(),
                                   new JdbcCartItemRepoImpl());
 

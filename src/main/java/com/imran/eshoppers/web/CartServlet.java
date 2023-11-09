@@ -4,8 +4,8 @@ import com.imran.eshoppers.domain.Cart;
 import com.imran.eshoppers.domain.User;
 import com.imran.eshoppers.exception.CartItemNotFoundException;
 import com.imran.eshoppers.exception.ProductNotFoundException;
-import com.imran.eshoppers.repository.CartRepositoryImpl;
 import com.imran.eshoppers.repository.JdbcCartItemRepoImpl;
+import com.imran.eshoppers.repository.JdbcCartRepoImpl;
 import com.imran.eshoppers.repository.JdbcProductRepoImpl;
 import com.imran.eshoppers.service.CartService;
 import com.imran.eshoppers.service.CartServiceImpl;
@@ -27,7 +27,7 @@ public class CartServlet extends HttpServlet {
             = LoggerFactory.getLogger(CartServlet.class);
 
     private final CartService cartService
-            = new CartServiceImpl(new CartRepositoryImpl(),
+            = new CartServiceImpl(new JdbcCartRepoImpl(),
                                   new JdbcProductRepoImpl(),
                                   new JdbcCartItemRepoImpl());
 
