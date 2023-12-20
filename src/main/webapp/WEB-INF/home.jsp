@@ -1,15 +1,39 @@
-<!DOCTYPE HTML>
+<%@include file="includes/header.jsp"%>
+<%@include file="includes/navigation.jsp"%>
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Cottage BD</title>
-</head>
-<body>
-    <header>
-        <img src="">
-    </header>
-</body>
-</html>
+<div class="container">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="<c:url value="/image/home.jpg" />" style="height: 200px" alt=""/>
+            </div>
+            <div class="col-md-6">
+                <h1>Hello World!!</h1>
+            </div>
+        </div>
+<%--    </div>--%>
+<%--    <div class="row">--%>
+<%--        <c:forEach var="product" items="${products}">--%>
+<%--            <div class="col-sm-4">--%>
+<%--                <div class="card h-100 mb-4">--%>
+<%--                    <div class="card-body">--%>
+<%--                        <h5 class="card-title">--%>
+<%--                            <c:out value="${product.name}"/>--%>
+<%--                        </h5>--%>
+<%--                        <p class="card-text">--%>
+<%--                            <c:out value="${product.description}"/>--%>
+<%--                        </p>--%>
+<%--                        <p class="card-text">--%>
+<%--                            Price: $--%>
+<%--                            <c:out value="${product.price}"/>--%>
+<%--                        </p>--%>
+<%--                        <a href="#" class="card-link btn btn-outline-info">--%>
+<%--                            Add to Cart--%>
+<%--                        </a>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </c:forEach>--%>
+    </div>
+</div>
+<%@include file="includes/footer.jsp"%>
