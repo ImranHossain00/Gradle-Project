@@ -1,51 +1,15 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: peripatetic
-  Date: 10/2/23
-  Time: 1:56 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@include file="includes/headr.jsp"%>
-<%@include file="includes/navigation.jsp"%>
+<!DOCTYPE HTML>
 
-<div class="container">
-    <div class="jumbotron">
-<<<<<<< HEAD
-        <h1>Welcome to e-shoppers!</h1>
-=======
-        <c:if test="${sessionScope.user != null}">
-            <h1>
-                Hello <c:out value="${sessionScope.user.firstName}"/>,
-                welcome to e-shoppers!
-            </h1>
-        </c:if>
-
->>>>>>> 8bc685b (Adding as noob)
-        <img src="<c:url value="/image/img_eshop_1.jpg" />"
-             style="height: 200px" alt=""/>
-    </div>
-    <div class="row">
-        <c:forEach var="product" items="${products}">
-            <div class="col-sm-4">
-                <div class="card h-100 mb-4">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <c:out value="${product.name}"/>
-                        </h5>
-                        <p class="card-text">
-                            <c:out value="${product.description}"/>
-                        </p>
-                        <p class="card-text">
-                            Price: $
-                            <c:out value="${product.price}"/>
-                        </p>
-                        <a href="#" class="card-link btn btn-outline-info">
-                            Add to Cart
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </c:forEach>
-    </div>
-</div>
-<%@include file="includes/footer.jsp"%>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Cottage BD</title>
+</head>
+<body>
+    <header>
+        <img src="">
+    </header>
+</body>
+</html>
