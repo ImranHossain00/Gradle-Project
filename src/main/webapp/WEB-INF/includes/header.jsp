@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>eShoppers</title>
+    <title>Tech Cottage</title>
     <link rel="stylesheet" type="text/css"
           href="<c:url
     value="/webjars/bootstrap/4.3.1/css/bootstrap.min.css"/> "/>
