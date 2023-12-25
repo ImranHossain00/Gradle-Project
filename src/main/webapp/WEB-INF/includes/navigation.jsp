@@ -23,7 +23,7 @@
                     </a>
                 </li>
                 <li class="nav-link active">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="login">
                         Log In
                     </a>
                 </li>
