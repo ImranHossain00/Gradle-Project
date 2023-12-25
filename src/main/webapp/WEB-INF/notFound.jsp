@@ -4,7 +4,7 @@
 <div class="container">
     <div class="alert alert-warning" role="alert">
         <h4 class="alert-heading text-danger">Page Not Found</h4>
-        <p>
+        <p class="text-muted">
             We're sorry, we couldn't find the page you requested.
         </p>
     </div>

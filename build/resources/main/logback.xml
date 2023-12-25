@@ -16,21 +16,26 @@
                   class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
                   <maxFileSize>1KB</maxFileSize>
               </triggeringPolicy>
-        <endcoder>
-            <pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n</pattern>
-        </endcoder>
-    </appender>
-
-    <appender>
-        <endcoder name="STDOUT"
-                  class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
             <pattern>
                 %d{dd-MM-yyyy HH:mm:ss.SSS}
                 %magenta([%thread])
                 %highlight(%-5level)
                 %logger{36}.%M - %msg%n
             </pattern>
-        </endcoder>
+        </encoder>
+    </appender>
+
+    <appender name="STDOUT"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{dd-MM-yyyy HH:mm:ss.SSS}
+                %magenta([%thread])
+                %highlight(%-5level)
+                %logger{36}.%M - %msg%n
+            </pattern>
+        </encoder>
     </appender>
     <root level="debug">
         <appender-ref ref="FILE"/>

@@ -31,6 +31,7 @@ public class HomeServlet extends HttpServlet {
             throws ServletException, IOException {
 
         LOGGER.debug("Serving Home servlet");
+
         List<ProductDTO> products
                 = productService.findAllProductSortedByName();
         req.setAttribute("products", products);
