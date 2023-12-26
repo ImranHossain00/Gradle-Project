@@ -7,6 +7,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 
+// To transfer data from the client signup page to User domain class.
 @PasswordEqual(
         first = "password",
         second = "confirmPassword",
